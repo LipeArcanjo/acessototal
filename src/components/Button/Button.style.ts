@@ -13,8 +13,8 @@ export const ButtonElement = styled.button<ButtonProps>`
     font-size: 16px;
     font-weight: 600;
     border-radius: 50px;
-    background-color: ${colors.blue.main};
-    color: ${colors.white.main};
+    background-color: ${colors.white.main};
+    color: ${colors.dark_blue.main};
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -44,10 +44,11 @@ export const ButtonElement = styled.button<ButtonProps>`
     ${(props) =>
     props.variant === "info" &&
     `
-    background-color: #1F5FBF;
+    background-color: ${colors.blue.main};
     color: white;
     &:hover {
-        background-color: #03254c;
+        background-color: ${(colors.dark_blue.main)};
+        color: ${colors.white.main};
     }
     `}
 `;
