@@ -4,6 +4,7 @@ export const colors = {
     },
     blue: {
         main: "#1F5FBF",
+        pale: "#E1EBFA"
     },
     navy: {
         main: "#2154b9",

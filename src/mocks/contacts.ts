@@ -1,7 +1,4 @@
 import Teste  from "../assets/Salesforce_logo.png"
-import Teste2  from "../assets/computador-CRM-Salesforce.png"
-import Teste3  from "../assets/fiap-logo.png"
-
 
 export const contactList = [
     {
@@ -14,21 +11,21 @@ export const contactList = [
         image: Teste
     },
     {
-        rm: "RM: 553889",
-        name: "Gabriel de Matos",
-        surname:"Magalhães",
-        local: "São Paulo",
-        university: "Fiap",
-        github: "Xdematos",
-        image: Teste
-    },
-    {
         rm: "RM: 553471",
         name: "Gustavo Vieira",
         surname:"Bargas",
         local: "São Paulo",
         university: "Fiap",
         github: "guszv1",
+        image: Teste
+    },
+    {
+        rm: "RM: 553889",
+        name: "Gabriel de Matos",
+        surname:"Magalhães",
+        local: "São Paulo",
+        university: "Fiap",
+        github: "Xdematos",
         image: Teste
     },
 ]
