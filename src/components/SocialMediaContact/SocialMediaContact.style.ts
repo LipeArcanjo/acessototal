@@ -14,7 +14,7 @@ export const HeaderElementContact = styled.div`
 }
 `
 
-export const IconWrapperElement = styled.div`
+export const IconElement = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;

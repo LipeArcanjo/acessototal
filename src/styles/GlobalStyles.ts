@@ -47,10 +47,6 @@ export const GlobalStyles = createGlobalStyle`
     border: 0;
 }
 
-    li {
-    list-style: none;
-}
-
     ::after,
     ::before {
     box-sizing: inherit;
@@ -76,51 +72,11 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 600;
 }
 
-    h1 {
-    font-size: 28px;
-}
-
-    h2 {
-    font-size: 24px;
-}
-
-    h3 {
-    font-size: 20px;
-}
-
-    h4 {
-    font-size: 16px;
-}
-
-    h5 {
-    font-size: 12px;
-}
-
-    h6 {
-    font-size: 12px;
-}
-
     p {
     line-height: 1.5;
 }
 
     strong {
     font-weight: 800;
-}
-
-    ol, ul {
-    margin-bottom: 16px;
-}
-
-    ol li {
-    margin-right: 4px;
-    margin-left: 24px;
-    list-style-type: decimal
-}
-
-    ul li {
-    margin-right: 4px;
-    margin-left: 24px;
-    list-style-type: '-'
 }
 `;

@@ -61,8 +61,12 @@ export const HomeProducts = styled.div`
     );
 `
 
-export const HomeProductsItems = styled.div`
+export const HomeProductsItemsList = styled.div`
     display: flex;
     justify-content: space-between;
+`
+
+export const HomeProductsItems = styled.div`
+    padding: 15vh 0;
 `
 

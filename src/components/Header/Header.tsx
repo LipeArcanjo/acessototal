@@ -10,7 +10,7 @@
     import { menus } from "../../mocks"
     import { useEffect, useState } from "react";
     import { MenuList } from "../menuList/menuList";
-    import { HeaderContact } from "../HeaderContact/HeaderContact";
+    import { SocialMediaContact } from "../SocialMediaContact/SocialMediaContact";
     
 export const Header = () => {
 
@@ -23,13 +23,13 @@ export const Header = () => {
     return (
         <HeaderElement>
             {/* Contato */}
-            <HeaderContact />
+            <SocialMediaContact />
             {/* Navbar */}
             <HeaderWrapperElement>
                 <MenuWrapperElement>
                     {/* Logo */}
                     <LogoElement to="/">
-                        <img src={Logo} alt="Salesforce Logo" />
+                        <img src={Logo} id="logo" alt="Salesforce Logo" />
                     </LogoElement>
                     {/* Páginas disponíveis */}
                     <MenuCategories>

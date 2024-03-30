@@ -1,6 +1,6 @@
 import { Button } from "../../components/Button/Button";
 import { Layout } from "../../components/Layout/Layout";
-import { HomeActionContentElement, HomeColumnElement, HomeFirstImage, HomeWrapperElement, HomeProducts, HomeProductsItems,} from "./Home.style";
+import { HomeActionContentElement, HomeColumnElement, HomeFirstImage, HomeWrapperElement, HomeProducts, HomeProductsItemsList, HomeProductsItems,} from "./Home.style";
 import FirstImage from "../../assets/computador-CRM-Salesforce.png"
 import { useEffect, useState } from "react";
 import { products } from "../../mocks/products";
@@ -34,14 +34,16 @@ export default function Home() {
                         <h2>Produtos</h2>
                     </HomeActionContentElement>
                     <HomeProducts>
-                        <HomeProductsItems>
+                        <HomeProductsItemsList>
                             {product.map((item, index) => (
                                 <ProductList key={index} data={item} />
                             ))}
-                        </HomeProductsItems>
+                        </HomeProductsItemsList>
                     </HomeProducts>
                     <HomeActionContentElement>
-                        <span>Hello World!</span>
+                        <HomeProductsItems>
+                            <p>Hello World!</p>
+                        </HomeProductsItems>
                     </HomeActionContentElement>
                 </HomeColumnElement>
             </HomeWrapperElement>

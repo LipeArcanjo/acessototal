@@ -1,3 +1,4 @@
+import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
 import { LayoutWrapperElement } from "./Layout.style";
 
@@ -10,6 +11,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <>
         <Header />
         <LayoutWrapperElement>{children}</LayoutWrapperElement>
+        <Footer />
         </>
 );
 };

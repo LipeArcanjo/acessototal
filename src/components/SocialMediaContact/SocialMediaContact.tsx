@@ -1,11 +1,11 @@
     import {
-    IconWrapperElement,
-    } from "./HeaderContact.style";
+    IconElement
+    } from "./SocialMediaContact.style";
     import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-    import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-    import { HeaderElementContact } from "./HeaderContact.style";
+    import { faFacebookF, faXTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+    import { HeaderElementContact } from "./SocialMediaContact.style";
 
-export const HeaderContact = () => {
+export const SocialMediaContact = () => {
 
     return (
         <HeaderElementContact>
@@ -13,7 +13,7 @@ export const HeaderContact = () => {
                 Email: contato@acessototal.com.br - Tel: (12) 2456-7890
             </span>
             <div>
-                <IconWrapperElement>
+                <IconElement>
                     <span>
                         Redes sociais:
                     </span>
@@ -27,14 +27,14 @@ export const HeaderContact = () => {
                     <a href="/">
                         <FontAwesomeIcon style={{
                             color: '#03254c'
-                        }}icon={faTwitter} />
+                        }}icon={faXTwitter} />
                     </a>
                     <a href="/">
                         <FontAwesomeIcon style={{
                             color: '#03254c'
                         }}icon={faInstagram} />
                     </a>
-                </IconWrapperElement>
+                </IconElement>
             </div>
         </HeaderElementContact>
 );
