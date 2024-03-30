@@ -2,10 +2,9 @@ import { styled } from 'styled-components';
 import { colors } from "../../styles/colors";
 
 export const HomeWrapperElement = styled.div`
-    padding: 4vh 0;
+    padding: 2vh 0;
     width: 100%;
     height: auto;
-    background-color: ${colors.gray.main};
     display: table;
 `;
 
@@ -17,6 +16,7 @@ export const HomeColumnElement = styled.div`
 `;
 
 export const HomeActionContentElement = styled.div`
+    margin-bottom: 1vh;
     display: table-cell;
     vertical-align: middle;
 
@@ -33,7 +33,6 @@ export const HomeActionContentElement = styled.div`
         font-size: 3.6rem;
         font-weight: 800;
         color: ${colors.dark_blue.main};
-        // padding: 0 0 2vh 10vw;
     }
 
     & p {
@@ -67,6 +66,34 @@ export const HomeProductsItemsList = styled.div`
 `
 
 export const HomeProductsItems = styled.div`
-    padding: 15vh 0;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    width: 40vw;
+    position: relative;
+    
+    & h3{
+        font-size: 2em;
+        color: ${colors.dark_blue.main};
+        font-weight: 800;
+        margin-bottom: 2vh;
+    }
+
+    & h4{
+        font-size: 1.5em;
+        color: black;
+        font-weight: 600;
+    }
+
+    & p {
+        font-size: 1.5em;
+        align-text: justify;
+    }
 `
 
+export const HomeMarketingImage = styled.img`
+    max-width: 40vw;
+    width: auto;
+    position: absolute;
+    left: 90%;
+    top: 10%;
+`;

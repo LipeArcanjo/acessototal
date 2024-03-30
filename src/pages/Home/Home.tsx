@@ -1,7 +1,8 @@
 import { Button } from "../../components/Button/Button";
 import { Layout } from "../../components/Layout/Layout";
-import { HomeActionContentElement, HomeColumnElement, HomeFirstImage, HomeWrapperElement, HomeProducts, HomeProductsItemsList, HomeProductsItems,} from "./Home.style";
+import { HomeActionContentElement, HomeColumnElement, HomeFirstImage, HomeWrapperElement, HomeProducts, HomeProductsItemsList, HomeProductsItems, HomeMarketingImage, } from "./Home.style";
 import FirstImage from "../../assets/computador-CRM-Salesforce.png"
+import MarketingImage from "../../assets/marketing.png"
 import { useEffect, useState } from "react";
 import { products } from "../../mocks/products";
 import { ProductList } from "../../components/HomeProductsList/HomeProductsList";
@@ -41,8 +42,18 @@ export default function Home() {
                         </HomeProductsItemsList>
                     </HomeProducts>
                     <HomeActionContentElement>
+                        {/* Não criei um componente pois planejamos apenas o conteúdo de marketing. */}
                         <HomeProductsItems>
-                            <p>Hello World!</p>
+                            <h4> {'>'} Produtos </h4>
+                            <h3>Marketing</h3>
+                            <p>
+                                Faça cada momento valer a pena
+                                para alcançar o sucesso imediato
+                            </p>
+                            <Button size="large" variant="info" onClick={() => {}}>
+                                Se torne um parceiro {'>'}
+                            </Button>
+                            <HomeMarketingImage src={MarketingImage} />
                         </HomeProductsItems>
                     </HomeActionContentElement>
                 </HomeColumnElement>

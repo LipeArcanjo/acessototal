@@ -14,6 +14,15 @@ export const HomeProductsList = styled.div`
     align-items: center;
     margin-right: 1em;
     transition: background-color 350ms ease-in, transform 500ms ease-out;
+
+    &:first-child{
+        background-color: ${(colors.dark_blue.main)};
+        color: ${colors.white.main};
+        transform: translateY(
+            -2vh
+        );
+    }
+
     &:hover {
         background-color: ${(colors.dark_blue.main)};
         color: ${colors.white.main};
