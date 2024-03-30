@@ -4,7 +4,7 @@ export const feedbackReactionList = [
         emoji: "😡",
     },
     {
-        text: "Desapontado",
+        text: "Chateado",
         emoji: "🥺",
     },
     {

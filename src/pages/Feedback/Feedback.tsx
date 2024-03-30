@@ -1,17 +1,28 @@
 import { useEffect, useState } from "react";
 import { Layout } from "../../components/Layout/Layout";
 import { feedbackReactionList } from "../../mocks/feedbackReaction";
-import { FeedbackBox, FeedbackReaction, FeedbackText } from "./Feedback.style";
+import { FeedbackBox, FeedbackForms, FeedbackReaction, FeedbackText } from "./Feedback.style";
 import { FeedbackCard } from "../../components/FeedbackCard/FeedbackCard";
+import { Button } from "../../components/Button/Button";
 
 export default function Feedback() {
 
     const [reactions, setReactions] = useState([]);
+    const [feedbackInput, setFeedbackInput] = useState('');
 
     useEffect(() => {
         setReactions(feedbackReactionList);
     }, []);
 
+    // Armazenando o "feedback" do usuário
+    const handleChange = (event: any) => {
+        setFeedbackInput(event.target.value);
+    };
+
+    // Exibir no console!
+    const handleClick = () => {
+        console.log(feedbackInput);
+    }
 
     return (
         <Layout>
@@ -31,8 +42,14 @@ export default function Feedback() {
                     ))}
                 </FeedbackReaction>
                 <FeedbackText>
-                <h2>Quais são os pensamentos que você gostaria de compartilhar?</h2>
+                    <h2>Quais são os pensamentos que você gostaria de compartilhar?</h2>
                 </FeedbackText>
+                <FeedbackForms>
+                    <textarea value={feedbackInput} onChange={handleChange}/>
+                </FeedbackForms>
+                <Button variant="info" onClick={handleClick}>
+                    Enviar Solicitação
+                </Button>
             </FeedbackBox>
         </Layout>
     );

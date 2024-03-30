@@ -7,6 +7,10 @@ export const FeedbackBox = styled.div`
     width: 90%;
     background-color: ${colors.blue.pale};
     border-radius: 30px;
+
+    & button {
+        margin: 4.3vh auto 0 auto;
+    }
 `;
 
 export const FeedbackText = styled.div`
@@ -20,7 +24,7 @@ export const FeedbackText = styled.div`
     }
 
     & p:last-child{
-        margin-bottom: 6vh;
+        margin-bottom: 1vh;
     }
 
     & span{
@@ -40,4 +44,20 @@ export const FeedbackReaction = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+`
+
+export const FeedbackForms = styled.form`
+    margin: 3vh auto 0 auto;
+    width: 80%;
+
+    & textarea{
+        width: 100%;
+        height: 50vh;
+        padding: 2.5vh 1.5vw;
+        box-sizing: border-box;
+        border: 5px solid ${colors.gray.main};
+        border-radius: 40px;
+        background-color: ${colors.white.main};
+        resize: none;
+    }
 `
