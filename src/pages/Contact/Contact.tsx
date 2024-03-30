@@ -1,10 +1,78 @@
+import { useEffect, useState } from "react";
 import { Layout } from "../../components/Layout/Layout";
+import { ContactImage, ContactWrapper, IconContent } from "./Contact.style";
+import { contactList } from "../../mocks/contacts";
+import { ContactCard } from "../../components/ContactCard/ContactCard";
+import { ContactCardContent, ContactCardRow } from "../../components/ContactCard/ContactCard.style";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot, faBuildingColumns } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Button } from "../../components/Button/Button";
 
 export default function Contact() {
 
+    const [contacts, setContacts] = useState([]);
+
+    useEffect(() => {
+        setContacts(contactList);
+    }, []);
+
     return (
         <Layout>
-            <p>Hello World!</p>
+            {/* LEMBRAR DE VOLTAR PRA DENTRO DO CONTACT WRAPPER!! */}
+            <ContactWrapper>
+                <h1>Quem são os hérois por trás das telas?</h1>
+                {contacts.map((contact, index) => (
+                    <ContactCard key={index}>
+                        <ContactCardRow>
+                            <ContactCardContent>
+                                {/* Informações dos contatos */}
+                                <h3>{contact.rm}</h3>
+                                <h2>{contact.name}</h2>
+                                <h4>{contact.surname}</h4>
+                                <IconContent>
+                                    {/* Icones */}
+                                    {/* Local */}
+                                    <FontAwesomeIcon style={{
+                                        color: 'black',
+                                        width: '50px',
+                                        height: '50px',
+                                        padding: '15px',
+                                    }} icon={faLocationDot} />
+                                    <span>{contact.local}</span>
+                                </IconContent>
+                                <IconContent>
+                                    {/* Universidade */}
+                                    <FontAwesomeIcon style={{
+                                        color: 'black',
+                                        width: '50px',
+                                        height: '50px',
+                                        padding: '15px',
+                                    }} icon={faBuildingColumns} />
+                                    <span>{contact.university}</span>
+                                </IconContent>
+                                <IconContent>
+                                    {/* Github */}
+                                    <FontAwesomeIcon style={{
+                                        color: 'black',
+                                        width: '50px',
+                                        height: '50px',
+                                        padding: '15px',
+                                    }} icon={faGithub} />
+                                    <span>{contact.github}</span>
+                                </IconContent>
+                            </ContactCardContent>
+                            {/* Foto dos HERÓIS */}
+                            <ContactImage>
+                                <img src={contact.image} alt={contact.name + contact.surname} />
+                            </ContactImage>
+                        </ContactCardRow>
+                        <Button variant="info" onClick={() => { }}>
+                            Entre em contato
+                        </Button>
+                    </ContactCard>
+                ))}
+            </ContactWrapper>
         </Layout>
     );
 }
