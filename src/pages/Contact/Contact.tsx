@@ -24,7 +24,8 @@ export default function Contact() {
                 <h1>Quem são os hérois por trás das telas?</h1>
                 {contacts.map((contact, index) => (
                     <ContactCard key={index}>
-                        <ContactCardRow>
+                        {/* Verificando se o índice é par ou impar */}
+                        <ContactCardRow reverse={index % 2 !== 0}>
                             <ContactCardContent>
                                 {/* Informações dos contatos */}
                                 <h3>{contact.rm}</h3>

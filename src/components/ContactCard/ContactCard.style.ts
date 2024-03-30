@@ -1,6 +1,11 @@
 import { styled } from "styled-components";
 import { colors } from "../../styles/colors";
 
+// Interface para aplicar o parâmetro de reverse :)
+interface ContactCardRowProps {
+    reverse: boolean;
+}
+
 export const ContactCardElement = styled.div`
     margin: 0 auto;
     width: 60vw;
@@ -42,8 +47,16 @@ export const ContactCardContent = styled.div`
     }
 `;
 
-export const ContactCardRow = styled.div`
+export const ContactCardRow = styled.div<ContactCardRowProps>`
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    // Invertendo a direção conforme o indice for impar!!
+    ${({ reverse }) =>
+        reverse &&
+        `
+        flex-direction: row-reverse;
+    `}
 `
