@@ -23,7 +23,7 @@ export const ButtonElement = styled.button<ButtonProps>`
         background-color: ${(colors.dark_blue.main)};
         color: ${colors.white.main};
         transition: background-color 350ms;
-}
+    }
 
 
     ${(props) =>

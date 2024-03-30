@@ -1,17 +1,17 @@
-    import {
+import {
     HeaderElement,
     HeaderWrapperElement,
     LogoElement,
     MenuWrapperElement,
     MenuCategories,
-    } from "./Header.styles";
-    import Logo from "../../assets/Salesforce_logo.png";
-    import { UserMenu } from "../UserMenu/UserMenu";
-    import { menus } from "../../mocks"
-    import { useEffect, useState } from "react";
-    import { MenuList } from "../menuList/menuList";
-    import { SocialMediaContact } from "../SocialMediaContact/SocialMediaContact";
-    
+} from "./Header.styles";
+import Logo from "../../assets/Salesforce_logo.png";
+import { UserMenu } from "../UserMenu/UserMenu";
+import { menus } from "../../mocks"
+import { useEffect, useState } from "react";
+import { MenuList } from "../menuList/menuList";
+import { SocialMediaContact } from "../SocialMediaContact/SocialMediaContact";
+
 export const Header = () => {
 
     const [menu, setMenu] = useState([]);
@@ -33,8 +33,9 @@ export const Header = () => {
                     </LogoElement>
                     {/* Páginas disponíveis */}
                     <MenuCategories>
-                        {menu.map((item, index) => (
-                            <MenuList key={index} data={item} />
+                        {menu.map((menu, index) => (
+                            <MenuList key={index} data={menu}
+                            />
                         ))}
                     </MenuCategories>
                 </MenuWrapperElement>

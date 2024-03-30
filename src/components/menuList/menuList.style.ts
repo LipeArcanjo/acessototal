@@ -13,8 +13,16 @@ export const MenuListElement = styled.div`
     display: flex;
     align-items: center;
     margin-right: 1em;
-&:hover {
-    background-color: ${(colors.dark_blue.main)};
-    color: ${colors.white.main};
-    transition: background-color 350ms;
+    
+    &:hover {
+        background-color: ${(colors.dark_blue.main)};
+        color: ${colors.white.main};
+        transition: background-color 350ms;
+    }
+    
+    &.active {
+        background-color: ${(colors.dark_blue.main)};
+        color: ${colors.white.main};
+        transition: background-color 350ms;
+    }
 }`
