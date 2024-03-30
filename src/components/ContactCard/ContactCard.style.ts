@@ -11,7 +11,7 @@ export const ContactCardElement = styled.div`
     width: 60vw;
 
     & button {
-        margin: 2vh auto 8vh auto;
+        margin: 4vh auto 8vh auto;
     }
 
     &:last-child {

@@ -4,6 +4,7 @@ import { colors } from '../../styles/colors';
 export const FooterBg = styled.footer`
     width: 100%;
     background-color: ${colors.dark_blue.main};
+    border-top: 0.8rem solid ${colors.blue.main};
 `;
 
 export const FooterWrapperElement = styled.div`

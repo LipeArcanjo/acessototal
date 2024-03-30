@@ -29,4 +29,5 @@ export const HomeProductsList = styled.div`
         transform: translateY(
             -2vh
         );
-}`
+    }
+`
