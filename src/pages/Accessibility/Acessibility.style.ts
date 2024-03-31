@@ -6,7 +6,6 @@ export const AcessibilityWrapper = styled.div`
     padding: 2vh 0;
     width: 100%;
     height: auto;
-    background-color: ${colors.blue.pale};
     
     & h1 {
         margin-bottom: 1vh;
@@ -21,25 +20,60 @@ export const AcessibilityWrapper = styled.div`
 `;
     
     export const AcessibilityFirstContent = styled.div`
-    margin-bottom: 1vh;
+    margin: 0 auto;
     display: flex;
 
     & h2 {
-        line-height: 1.5;
-        font-size: 3.6rem;
-        font-weight: 800;
-        color: ${colors.dark_blue.main};
+        color: ${colors.white.main};
+        font-weight: 600;
+        font-size: 3em;
+        text-align: center;
     }
 
     & p {
-        font-size: 1.3rem;
+        width: 300px;
+        font-size: 1em;
         font-weight: 400;
         color: ${colors.dark_blue.main};
 }
-    & Button {
-        margin: 8.5vh auto;
+    & img {
+        max-width:300px;
+        max-height:300px;
+        width: auto;
+        height: auto;
+        border-radius: 50%;
     }
 `;
 
+export const NavegaCaoImage = styled.div`
+    margin: auto auto;
+
+    & img{
+        margin-bottom: 5vh;
+    }
+
+    & p{
+        color: black;
+        font-weight: 600;
+        font-size: 1.19em;
+        text-align: center;
+        margin-bottom: 3.5vh;
+    }
+
+    & button {
+        margin: 0 auto;
+    }
+`
+
     export const AcessibilitySecondContent = styled.div`
+    width: 90%;
+    margin: 10vh auto;
+
+    & p{
+        color: black;
+        font-weight: 600;
+        font-size: 1.3em;
+        text-align: center;
+        margin-bottom: 3.5vh;
+    }
 `;

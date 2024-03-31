@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Layout } from "../../components/Layout/Layout";
 import { accessibilitiesList } from "../../mocks/acessibilityList";
-import { AcessibilityFirstContent, AcessibilityList, AcessibilityWrapper, AcessibilitySecondContent } from "./Acessibility.style";
+import { AcessibilityFirstContent, AcessibilityList, AcessibilityWrapper, AcessibilitySecondContent, NavegaCaoImage } from "./Acessibility.style";
 import { AccessibilityCard } from "../../components/AccessibilityList/AccessibilityList";
+import NavegaCao from "../../assets/personagem-exemplo-acessibilidade.jpg"
+import { Button } from "../../components/Button/Button";
 
 export default function Acessibility() {
 
@@ -25,16 +27,26 @@ export default function Acessibility() {
                 <AcessibilityFirstContent>
                     <AcessibilityList>
                         {accessibilities.map((accessibilities, index) => (
-                            <AccessibilityCard onClick={handleClick} key={index}>
-                                <h1>{accessibilities.text}</h1>
+                            <AccessibilityCard key={index}>
+                                <h2>{accessibilities.text}</h2>
                             </AccessibilityCard>
                         ))}
                     </AcessibilityList>
-                    <img src="" alt="" />
-                    <p>Hello World!</p>
+                    <NavegaCaoImage>
+                        <img src={NavegaCao} alt="Personagem cachorro criado pela AcessoTotal para representar a acessibilidade." />
+                        <p>Oi! Eu sou o NavegaCão, sou eu quem irá te auxiliar  durante toda a navegação! </p>
+                        <Button size="large" onClick={() => { }}>
+                            Off
+                        </Button>
+                    </NavegaCaoImage>
                 </AcessibilityFirstContent>
                 <AcessibilitySecondContent>
-                    <p>Hello World!</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed luctus iaculis semper. Mauris at est non mauris congue
+                        consectetur. Sed porttitor, lacus et consequat vestibulum,
+                        quam velit ullamcorper mi, non vestibulum lorem risus at tortor.
+                    </p>
                 </AcessibilitySecondContent>
             </AcessibilityWrapper>
         </Layout>
