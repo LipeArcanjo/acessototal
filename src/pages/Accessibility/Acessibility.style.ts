@@ -10,13 +10,14 @@ export const AcessibilityWrapper = styled.div`
     
     & h1 {
         margin-bottom: 1vh;
-        font-size: 3rem;
+        font-size: 5rem;
         font-weight: 800;
         color: ${colors.dark_blue.main};
     }
 `;
     
     export const AcessibilityList = styled.div`
+    margin-left: 5vw;
 `;
     
     export const AcessibilityFirstContent = styled.div`
