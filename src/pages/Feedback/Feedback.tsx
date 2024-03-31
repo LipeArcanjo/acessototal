@@ -22,6 +22,7 @@ export default function Feedback() {
     // Exibir no console!
     const handleClick = () => {
         console.log(feedbackInput);
+        setFeedbackInput(''); // <- Pra limpar o conteudo toda vez que o usuário apertar o botão!!
     }
 
     return (

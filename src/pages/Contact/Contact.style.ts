@@ -21,7 +21,7 @@ export const IconContent = styled.div`
 
 export const ContactImage = styled.div`
     img {
-        width: 25vw;
+        width: 28vw;
         height: auto;
 }
 `

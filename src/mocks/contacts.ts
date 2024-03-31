@@ -1,4 +1,6 @@
-import Teste  from "../assets/Salesforce_logo.png"
+import Lipe  from "../assets/Lil-lipe.png"
+import Gus  from "../assets/Gus.png"
+import Gab  from "../assets/Gab.png"
 
 export const contactList = [
     {
@@ -8,7 +10,7 @@ export const contactList = [
         local: "São Paulo",
         university: "Fiap",
         github: "LipeArcanjo",
-        image: Teste
+        image: Lipe
     },
     {
         rm: "RM: 553471",
@@ -17,7 +19,7 @@ export const contactList = [
         local: "São Paulo",
         university: "Fiap",
         github: "guszv1",
-        image: Teste
+        image: Gus
     },
     {
         rm: "RM: 553889",
@@ -26,6 +28,6 @@ export const contactList = [
         local: "São Paulo",
         university: "Fiap",
         github: "Xdematos",
-        image: Teste
+        image: Gab
     },
 ]

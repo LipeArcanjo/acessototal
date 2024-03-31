@@ -23,6 +23,7 @@ export const ContactCardContent = styled.div`
     margin: 0;
 
     & h2 {
+        margin: 0;
         font-size: 3rem;
         font-weight: 800;
         color: ${colors.dark_blue.main};
