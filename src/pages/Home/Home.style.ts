@@ -9,26 +9,23 @@ export const HomeWrapperElement = styled.div`
 `;
 
 export const HomeColumnElement = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 70vw;
-    margin: 0 auto;
+    display: table-cell;
 `;
 
 export const HomeActionContentElement = styled.div`
     margin-bottom: 1vh;
-    display: table-cell;
+    display: table-cell; 
     vertical-align: middle;
 
     & h1 {
-        line-height: 1.5;
-        margin-bottom: 1rem;
+        margin-bottom: 2vh;
         font-size: 7rem;
         font-weight: 800;
         color: ${colors.dark_blue.main};
 }
 
     & h2 {
+        margin-left: 5vw;
         line-height: 1.5;
         font-size: 3.6rem;
         font-weight: 800;
@@ -55,9 +52,6 @@ export const HomeProducts = styled.div`
     background-color: ${colors.blue.main};
     border-radius: 20px;
     width: 89vw;
-    transform: translateX(
-        -9.5vw
-    );
 `
 
 export const HomeProductsItemsList = styled.div`
@@ -69,7 +63,6 @@ export const HomeProductsItems = styled.div`
     padding-top: 15vh;
     padding-bottom: 5vh;
     width: 40vw;
-    position: relative;
     
     & h3{
         font-size: 2em;
@@ -91,9 +84,41 @@ export const HomeProductsItems = styled.div`
 `
 
 export const HomeMarketingImage = styled.img`
-    max-width: 40vw;
+    max-width: 500px;
+    max-height: 281px;
+    height-width: auto;
     width: auto;
-    position: absolute;
-    left: 90%;
-    top: 10%;
 `;
+
+export const HomeFlex = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+export const HomeProductsRow = styled.div`
+    margin-bottom: 1vh;
+
+    & h1 {
+        margin-bottom: 2vh;
+        font-size: 7rem;
+        font-weight: 800;
+        color: ${colors.dark_blue.main};
+    }
+
+    & h2 {
+        line-height: 1.5;
+        font-size: 3.6rem;
+        font-weight: 800;
+        color: ${colors.dark_blue.main};
+    }
+
+    & p {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: ${colors.dark_blue.main};
+    }
+    & Button {
+        margin: 8.5vh auto;
+    }
+`

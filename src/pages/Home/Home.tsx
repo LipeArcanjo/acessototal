@@ -1,6 +1,6 @@
 import { Button } from "../../components/Button/Button";
 import { Layout } from "../../components/Layout/Layout";
-import { HomeActionContentElement, HomeColumnElement, HomeFirstImage, HomeWrapperElement, HomeProducts, HomeProductsItemsList, HomeProductsItems, HomeMarketingImage, } from "./Home.style";
+import { HomeActionContentElement, HomeColumnElement, HomeFirstImage, HomeWrapperElement, HomeProducts, HomeProductsItemsList, HomeProductsItems, HomeMarketingImage, HomeFlex, HomeProductsRow, } from "./Home.style";
 import FirstImage from "../../assets/computador-CRM-Salesforce.png"
 import MarketingImage from "../../assets/marketing.png"
 import { useEffect, useState } from "react";
@@ -20,7 +20,6 @@ export default function Home() {
             <HomeWrapperElement>
                 <HomeActionContentElement>
                     <h1>Salesforce</h1>
-                    {/* Cometi a heresia do BR só pra testar por enquanto!!! KKKKKKKKK */}
                     <p>O que é a Salesforce? O que é CRM?</p>
                     <p>Assista ao vídeo abaixo de introdução para saber mais.</p>
                     <Button size="small" variant="info" onClick={() => { }}>
@@ -41,21 +40,23 @@ export default function Home() {
                             ))}
                         </HomeProductsItemsList>
                     </HomeProducts>
-                    <HomeActionContentElement>
-                        {/* Não criei um componente pois planejamos apenas o conteúdo de marketing. */}
-                        <HomeProductsItems>
-                            <h4> {'>'} Produtos </h4>
-                            <h3>Marketing</h3>
-                            <p>
-                                Faça cada momento valer a pena
-                                para alcançar o sucesso imediato
-                            </p>
-                            <Button size="large" variant="info" onClick={() => {}}>
-                                Se torne um parceiro {'>'}
-                            </Button>
+                    <HomeProductsRow>
+                        <HomeFlex>
+                            {/* Não criei um componente pois planejamos apenas o conteúdo de marketing. */}
+                            <HomeProductsItems>
+                                <h4> {'>'} Produtos </h4>
+                                <h3>Marketing</h3>
+                                <p>
+                                    Faça cada momento valer a pena
+                                    para alcançar o sucesso imediato
+                                </p>
+                                <Button size="large" variant="info" onClick={() => { }}>
+                                    Se torne um parceiro {'>'}
+                                </Button>
+                            </HomeProductsItems>
                             <HomeMarketingImage src={MarketingImage} />
-                        </HomeProductsItems>
-                    </HomeActionContentElement>
+                        </HomeFlex>
+                    </HomeProductsRow>
                 </HomeColumnElement>
             </HomeWrapperElement>
         </Layout>
