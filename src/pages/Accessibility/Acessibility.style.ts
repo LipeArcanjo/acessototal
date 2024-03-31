@@ -57,7 +57,7 @@ export const NavegaCaoImage = styled.div`
         font-weight: 600;
         font-size: 1.19em;
         text-align: center;
-        margin-bottom: 3.5vh;
+        margin-bottom: 10vh;
     }
 
     & button {

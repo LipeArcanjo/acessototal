@@ -5,6 +5,7 @@ import { AcessibilityFirstContent, AcessibilityList, AcessibilityWrapper, Acessi
 import { AccessibilityCard } from "../../components/AccessibilityList/AccessibilityList";
 import NavegaCao from "../../assets/personagem-exemplo-acessibilidade.jpg"
 import { Button } from "../../components/Button/Button";
+import ToggleSwitch from "../../components/ToggleSwitch/ToggleSwitch";
 
 export default function Acessibility() {
 
@@ -14,9 +15,7 @@ export default function Acessibility() {
         setAccessibilities(accessibilitiesList);
     }, []);
 
-    const handleClick = () => {
-        console.log("Clicou!");
-    }
+    
 
     return (
         <Layout>
@@ -35,9 +34,7 @@ export default function Acessibility() {
                     <NavegaCaoImage>
                         <img src={NavegaCao} alt="Personagem cachorro criado pela AcessoTotal para representar a acessibilidade." />
                         <p>Oi! Eu sou o NavegaCão, sou eu quem irá te auxiliar  durante toda a navegação! </p>
-                        <Button size="large" onClick={() => { }}>
-                            Off
-                        </Button>
+                        <ToggleSwitch />
                     </NavegaCaoImage>
                 </AcessibilityFirstContent>
                 <AcessibilitySecondContent>
