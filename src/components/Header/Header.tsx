@@ -4,6 +4,8 @@ import {
     LogoElement,
     MenuWrapperElement,
     MenuCategories,
+    MobileMenuIcon,
+    CloseMenuIcon
 } from "./Header.styles";
 import Logo from "../../assets/Salesforce_logo.png";
 import { UserMenu } from "../UserMenu/UserMenu";
@@ -11,14 +13,25 @@ import { menus } from "../../mocks"
 import { useEffect, useState } from "react";
 import { MenuList } from "../menuList/menuList";
 import { SocialMediaContact } from "../SocialMediaContact/SocialMediaContact";
+import { Link } from "react-router-dom";
+import { HiMenu, HiX } from "react-icons/hi";
 
 export const Header = () => {
 
     const [menu, setMenu] = useState([]);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         setMenu(menus);
     }, []);
+
+    const openMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
 
     return (
         <HeaderElement>
@@ -32,7 +45,10 @@ export const Header = () => {
                         <img src={Logo} id="logo" alt="Salesforce Logo" />
                     </LogoElement>
                     {/* Páginas disponíveis */}
-                    <MenuCategories>
+                    <MenuCategories isOpen={isMenuOpen}>
+                        <CloseMenuIcon onClick={closeMenu}>
+                            <HiX size={24} />
+                        </CloseMenuIcon>
                         {menu.map((menu, index) => (
                             <MenuList key={index} data={menu}
                             />
@@ -41,6 +57,9 @@ export const Header = () => {
                 </MenuWrapperElement>
                 {/* Login */}
                 <UserMenu />
+                <MobileMenuIcon onClick={openMenu}>
+                    <HiMenu size={24} />
+                </MobileMenuIcon>
             </HeaderWrapperElement>
         </HeaderElement>
     );
