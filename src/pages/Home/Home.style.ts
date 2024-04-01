@@ -6,6 +6,15 @@ export const HomeWrapperElement = styled.div`
     width: 100%;
     height: auto;
     display: table;
+
+    @media screen and (max-width: 600px) {
+        display: flex;
+        flex-direction: column-reverse;
+
+        h1{
+            font-size: 2rem;
+        }
+    }
 `;
 
 export const HomeColumnElement = styled.div`
@@ -40,11 +49,27 @@ export const HomeActionContentElement = styled.div`
     & Button {
         margin: 8.5vh auto;
     }
+
+    @media screen and (max-width: 600px) {
+        display:flex;
+        flex-direction: column;
+        justify:content:center;
+        h1,h2{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
 `;
 
 export const HomeFirstImage = styled.img`
     max-width: 40vw;
     width: auto;
+
+    @media screen and (max-width: 600px) {
+        max-width: 300px;
+    }
 `;
 
 export const HomeProducts = styled.div`
@@ -52,6 +77,10 @@ export const HomeProducts = styled.div`
     background-color: ${colors.blue.main};
     border-radius: 20px;
     width: 89vw;
+
+    @media screen and (max-width: 600px) {
+        width: 80vw;
+    }
 `
 
 export const HomeProductsItemsList = styled.div`
@@ -81,6 +110,13 @@ export const HomeProductsItems = styled.div`
         font-size: 1.5em;
         align-text: justify;
     }
+
+    @media screen and (max-width: 600px) {
+        
+        h4,h3,p {
+            font-size: 1rem;
+        }
+    }
 `
 
 export const HomeMarketingImage = styled.img`
@@ -88,6 +124,13 @@ export const HomeMarketingImage = styled.img`
     max-height: 281px;
     height-width: auto;
     width: auto;
+
+    @media screen and (max-width: 600px) {
+        max-width: 200px;
+        max-height: 281px;
+        height-width: auto;
+        width: auto;
+    }
 `;
 
 export const HomeFlex = styled.div`
@@ -113,12 +156,15 @@ export const HomeProductsRow = styled.div`
         color: ${colors.dark_blue.main};
     }
 
-    & p {
-        font-size: 1.3rem;
-        font-weight: 400;
-        color: ${colors.dark_blue.main};
-    }
     & Button {
         margin: 8.5vh auto;
+    }
+
+    @media screen and (max-width: 600px) {
+        display:flex;
+        
+        button{
+            font-size: 0.8em;
+        }
     }
 `

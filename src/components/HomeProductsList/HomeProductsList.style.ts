@@ -29,4 +29,11 @@ export const HomeProductsList = styled.div`
         transform: translateY(
             -2vh
         );
+    }
+
+    @media screen and (max-width: 600px) {
+        margin-right: 0;
+        font-size: 0.5em;
+        
+}
 }`
