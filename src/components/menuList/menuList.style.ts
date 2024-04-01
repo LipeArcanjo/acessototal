@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import { colors } from "../../styles/colors";
 
 export const MenuListElement = styled.div`
-    padding: 0 24px;
+    padding: 3vh 2vw;
     border: 0;
     font-size: 16px;
     font-weight: 600;

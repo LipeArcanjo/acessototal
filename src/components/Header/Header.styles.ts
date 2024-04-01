@@ -32,17 +32,18 @@ export const LogoElement = styled(Link)`
 
 export const MenuCategories = styled.div<{ isOpen: boolean }>`
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 17%;
-    left: 0;
-    background-color: white;
-    width: 100%;
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    justify-content: space-between;
+    
     @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 17%;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         display: ${(props) => (props.isOpen ? "flex" : "none")};
     }
 `;
@@ -56,7 +57,11 @@ export const MobileMenuIcon = styled.div`
     }
 `;
 
-export const CloseMenuIcon = styled.div`
+export const CloseMenuIcon = styled.div<{ isOpen: boolean }>`
     align-self: flex-end; 
     cursor: pointer;
+
+    @media screen and (min-width: 600px) {
+        display: none;
+    }
 `;

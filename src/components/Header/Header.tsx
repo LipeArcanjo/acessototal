@@ -46,7 +46,7 @@ export const Header = () => {
                     </LogoElement>
                     {/* Páginas disponíveis */}
                     <MenuCategories isOpen={isMenuOpen}>
-                        <CloseMenuIcon onClick={closeMenu}>
+                        <CloseMenuIcon isOpen={isMenuOpen} onClick={closeMenu}>
                             <HiX size={24} />
                         </CloseMenuIcon>
                         {menu.map((menu, index) => (
