@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface ClickData {
     timestamp: string;
@@ -7,7 +7,7 @@ interface ClickData {
 }
 
 const ClickTrackingButton: React.FC = () => {
-    const data: ClickData[] = [];
+    const [data, setData] = useState<ClickData[]>([]);
 
     const trackClickAndPosition = (event: MouseEvent) => {
         const clickData: ClickData = {
@@ -16,7 +16,7 @@ const ClickTrackingButton: React.FC = () => {
             yPosition: event.clientY,
         };
 
-        data.push(clickData);
+        setData(prevData => [...prevData, clickData]);
     };
 
     useEffect(() => {

@@ -14,7 +14,9 @@ export const Layout = ({ children }: LayoutProps) => {
             <Header />
             <LayoutWrapperElement>{children}</LayoutWrapperElement>
             <Footer />
-            <ClickTrackingButton />
+            {/* Esse componente foi utilizado para coleta de dados para a 
+            disciplina de AI e ChatBot :) */}
+            {/* <ClickTrackingButton /> */}
         </>
     );
 };
