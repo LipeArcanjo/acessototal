@@ -5,7 +5,7 @@ import Accessibility from "./pages/Accessibility/Acessibility";
 import Feedback from "./pages/Feedback/Feedback";
 
 export default function App() {
-  return (
+    return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
