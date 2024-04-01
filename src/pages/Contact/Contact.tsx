@@ -36,8 +36,8 @@ export default function Contact() {
                                     {/* Local */}
                                     <FontAwesomeIcon style={{
                                         color: 'black',
-                                        width: '50px',
-                                        height: '50px',
+                                        width: '30px',
+                                        height: '30px',
                                         padding: '15px',
                                     }} icon={faLocationDot} />
                                     <span>{contact.local}</span>
@@ -46,8 +46,8 @@ export default function Contact() {
                                     {/* Universidade */}
                                     <FontAwesomeIcon style={{
                                         color: 'black',
-                                        width: '50px',
-                                        height: '50px',
+                                        width: '30px',
+                                        height: '30px',
                                         padding: '15px',
                                     }} icon={faBuildingColumns} />
                                     <span>{contact.university}</span>
@@ -56,8 +56,8 @@ export default function Contact() {
                                     {/* Github */}
                                     <FontAwesomeIcon style={{
                                         color: 'black',
-                                        width: '50px',
-                                        height: '50px',
+                                        width: '30px',
+                                        height: '30px',
                                         padding: '15px',
                                     }} icon={faGithub} />
                                     <span>{contact.github}</span>

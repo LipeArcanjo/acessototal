@@ -12,11 +12,23 @@ export const ContactWrapper = styled.div`
         color: ${colors.dark_blue.main};
         text-align: center;
     }
+
+    @media screen and (max-width: 600px) {
+        h1{
+            font-size: 1rem;
+        }
+    }
 `;
 
 export const IconContent = styled.div`
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 600px) {
+        span{
+            font-size: 0.7rem;
+        }
+    }
 `
 
 export const ContactImage = styled.div`

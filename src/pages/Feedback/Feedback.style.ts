@@ -37,6 +37,12 @@ export const FeedbackText = styled.div`
         font-size: 1.6em;
         font-weight: 400;
     }
+
+    @media screen and (max-width: 600px) {
+        h2, p{
+            font-size: 1rem;
+        }
+    }
 `;
 
 export const FeedbackReaction = styled.div`
@@ -44,6 +50,16 @@ export const FeedbackReaction = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 600px) {
+        h1{
+            font-size: 0.7rem;
+        }
+
+        span{
+            font-size: 2.5rem;
+        }
+    }
 `
 
 export const FeedbackForms = styled.form`

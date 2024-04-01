@@ -42,9 +42,15 @@ export const ContactCardContent = styled.div`
         color: ${colors.dark_blue.main};
     }
 
-    & p {
-    min-height: 168px;
-    font-size: 1rem;
+    @media screen and (max-width: 600px) {
+        
+        h2{
+            font-size:1.1em;
+        }
+        
+        h3,h4,p{
+            font-size: 0.8em;
+        }
     }
 `;
 

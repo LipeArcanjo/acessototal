@@ -11,6 +11,10 @@ export const FooterWrapperElement = styled.div`
     width: 89vw;
     margin: 0 auto;
     padding: 6vh 0;
+    @media screen and (max-width: 600px) {
+        padding: 3vh 0;
+    }
+
 `;
 
 export const FooterWrapperCopyright = styled.div`
@@ -24,6 +28,13 @@ export const FooterWrapperCopyright = styled.div`
         font-weight: 200;
         font-style: italic;
     }
+
+    @media screen and (max-width: 600px) {
+        line-height: 0.4em;
+        span {
+            font-size: 0.5em;
+        }
+    }
 `;
 
 export const FooterActionContentElement = styled.div`
@@ -32,6 +43,10 @@ export const FooterActionContentElement = styled.div`
     justify-content: space-around;
     align-items: center;
     gap: 5em;
+    
+    @media screen and (max-width: 600px) {
+        gap: 1em;
+    }
 `;
 
 export const FooterImage = styled.img`
@@ -51,6 +66,10 @@ export const FooterSocialMedia = styled.div`
         color: ${colors.white.main};
         font-weight: 600;
         font-size: 1.45em;
+    }
+
+    @media screen and (max-width: 600px) {
+        display:none;
     }
 `;
 

@@ -27,4 +27,15 @@ export const FeedbackCardElement = styled.div`
         transition: background-color ease-in-out 100ms;
         cursor: pointer;
     }
+    
+    @media screen and (max-width: 600px) {
+        
+        h1{
+            font-size:0.6em;
+        }
+        
+        span{
+            font-size: 2em;
+        }
+    }
 `;

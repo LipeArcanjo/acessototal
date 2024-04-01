@@ -3,8 +3,7 @@ import { Layout } from "../../components/Layout/Layout";
 import { accessibilitiesList } from "../../mocks/acessibilityList";
 import { AcessibilityFirstContent, AcessibilityList, AcessibilityWrapper, AcessibilitySecondContent, NavegaCaoImage } from "./Acessibility.style";
 import { AccessibilityCard } from "../../components/AccessibilityList/AccessibilityList";
-import NavegaCao from "../../assets/personagem-exemplo-acessibilidade.jpg"
-import { Button } from "../../components/Button/Button";
+import NavegaCao from "../../assets/personagem-exemplo-acessibilidade.jpg";
 import ToggleSwitch from "../../components/ToggleSwitch/ToggleSwitch";
 
 export default function Acessibility() {
