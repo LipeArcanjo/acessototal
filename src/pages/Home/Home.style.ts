@@ -126,8 +126,8 @@ export const HomeMarketingImage = styled.img`
     width: auto;
 
     @media screen and (max-width: 600px) {
-        max-width: 200px;
-        max-height: 281px;
+        max-width: 180px;
+        max-height: 261px;
         height-width: auto;
         width: auto;
     }

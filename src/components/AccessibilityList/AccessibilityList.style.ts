@@ -5,8 +5,6 @@ export const AccessibilityCardElement = styled.div`
     width: 25vw;
     background-color: ${colors.blue.main};
     padding: 1.6vh 2vw;
-    
-    
 
     &:first-child{
         border-radius: 50px 50px 0 0;
@@ -31,5 +29,13 @@ export const AccessibilityCardElement = styled.div`
     &:hover:last-child{
         background-color: ${colors.dark_blue.main};
         border-radius: 0 50px 50px 50px;
+    }
+
+    @media screen and (max-width: 600px) {
+        h2{
+            margin: 0;
+            padding: 0;
+            font-size: 1em;
+        }
     }
 `;

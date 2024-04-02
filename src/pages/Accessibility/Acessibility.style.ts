@@ -13,6 +13,12 @@ export const AcessibilityWrapper = styled.div`
         font-weight: 800;
         color: ${colors.dark_blue.main};
     }
+
+    @media screen and (max-width: 600px) {
+        h1 {
+            font-size: 2rem;
+        }
+    }
 `;
     
     export const AcessibilityList = styled.div`
@@ -63,6 +69,20 @@ export const NavegaCaoImage = styled.div`
     & button {
         margin: 0 auto;
     }
+
+    @media screen and (max-width: 600px) {
+        text-align: center;
+
+        img {
+            max-width: 150px;
+        }
+
+        p{
+            font-size: 0.7em;
+            width: min-content;
+            margin: 0 auto 2vh auto;
+        }
+    }
 `
 
     export const AcessibilitySecondContent = styled.div`
@@ -75,5 +95,12 @@ export const NavegaCaoImage = styled.div`
         font-size: 1.3em;
         text-align: center;
         margin-bottom: 3.5vh;
+    }
+
+    @media screen and (max-width: 600px) {
+        p{
+            font-size: 0.7em;
+            margin: 0 auto 2vh auto;
+        }
     }
 `;

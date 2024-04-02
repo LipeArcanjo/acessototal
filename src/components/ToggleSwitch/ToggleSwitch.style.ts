@@ -18,10 +18,21 @@ export const StyledLabel = styled.label<{ checked: boolean }>`
         left: ${({ checked }) => (checked ? "calc(100% - 14px - 50px)" : "14px")};    
         top: 50%;  
         transform: translateY(-50%);
-        width: 50px;    
-        height: 50px;    
+        width: 30px;    
+        height: 30px;    
         background: #fff;    
         border-radius: 90px;    
         transition: 0.3s;  
+    }
+
+    @media screen and (max-width: 600px) {
+
+        width: 75px;  
+        height: 32px; 
+        
+        :after {
+        width: 25px;    
+        height: 25px;
+        }
     }
 `;
