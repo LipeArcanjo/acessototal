@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faBuildingColumns } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Button } from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 
 export default function Contact() {
 
@@ -22,6 +23,7 @@ export default function Contact() {
             {/* LEMBRAR DE VOLTAR PRA DENTRO DO CONTACT WRAPPER!! */}
             <ContactWrapper>
                 <h1>Quem são os hérois por trás das telas?</h1>
+                
                 {contacts.map((contact, index) => (
                     <ContactCard key={index}>
                         {/* Verificando se o índice é par ou impar */}
@@ -73,6 +75,14 @@ export default function Contact() {
                         </Button>
                     </ContactCard>
                 ))}
+                <h1>
+                <a href="https://github.com/LipeArcanjo/acessototal">Link do github</a>
+                </h1>
+                <h1>
+                <a href="https://youtu.be/Z1WsOGEc9wM">Link do video no youtube</a>
+                </h1>
+                <p>https://github.com/LipeArcanjo/acessototal</p>
+                <p>https://youtu.be/Z1WsOGEc9wM</p>
             </ContactWrapper>
         </Layout>
     );

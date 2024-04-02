@@ -4,6 +4,7 @@ import { colors } from "../../styles/colors";
 export const ContactWrapper = styled.div`
     padding: 3vh 0;
     width: 100%;
+    text-align: center;
 
     & h1{
         margin-bottom: 3rem;
@@ -17,7 +18,10 @@ export const ContactWrapper = styled.div`
         h1{
             font-size: 1rem;
         }
-    }
+
+        p{
+            font-size: 0.7rem;
+        }
 `;
 
 export const IconContent = styled.div`
