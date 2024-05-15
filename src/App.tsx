@@ -3,6 +3,7 @@ import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import Accessibility from "./pages/Accessibility/Acessibility";
 import Feedback from "./pages/Feedback/Feedback";
+import Login from "./pages/Login/Login";
 
 export default function App() {
     return (
@@ -12,7 +13,7 @@ export default function App() {
         <Route path="/acessibilidade" element={<Accessibility />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/contato" element={<Contact />} />
-        <Route path="/login" element={<Home />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
