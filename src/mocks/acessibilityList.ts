@@ -4,5 +4,4 @@ export const accessibilitiesList = [
     { text: "Auditiva"},
     { text: "Daltonismo"},
     { text: "Idoso" },
-    { text: "Motora"},
 ];
