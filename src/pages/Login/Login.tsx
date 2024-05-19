@@ -1,92 +1,111 @@
-import { useLocation } from "react-router-dom";
 import { Button } from "../../components/Button/Button";
 import { Layout } from "../../components/Layout/Layout";
+import { TextField } from "../../components/TextField/TextField";
 import { Form, LoginBox } from "./Login.style";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
-    const location = useLocation();
-    const [isRegister, setIsRegister] = useState(false);
+    const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
-    useEffect(() => {
-        if (location.hash === '#register') {
-            setIsRegister(true);
-        } else {
-            setIsRegister(false);
-        }
-    }, [location]);
-
-    const handleRegisterRedirect = () => {
-        window.location.hash = '#register';
+    const handleUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = event.target;
+        setUsername(value);
     };
 
-    const handleLoginRedirect = () => {
-        window.location.hash = '';
+    const handlePassword = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = event.target;
+        setPassword(value);
+    };
+
+    const handleLogin = async (event) => {
+        event.preventDefault();
+        const url = "http://localhost:8000/login/" + username + "/" + password;
+
+        const payload = {
+            username: username,
+            password: password
+        };
+
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json; charset=UTF-8",
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (!response.ok) {
+                if (response.status === 404) {
+                    alert("Nome de usuário e/ou senha inválido.");
+                } else {
+                    const error = await response.json();
+                    console.log(error);
+                }
+                return;
+            }
+
+            const data = await response.json();
+            
+            if (data) {
+                sessionStorage.setItem("userToken", data.token);
+                sessionStorage.setItem("fullname", data.fullname);
+                navigate("/");
+            }
+
+        } catch (error) {
+            console.log(error);
+        } finally {
+            console.log(
+                "Nome de Usuário:", username
+            );
+            console.log(
+                "Senha:", password
+            );
+        }
+    };
+
+    // Para fazer com que a senha fique visível ou não
+    const togglePasswordVisibility = () => {
+        setShowPassword(prevState => !prevState);
+    };
+
+    // Navegar para registrar-se
+    const handleClick = () => {
+        navigate("/register");
     };
 
     return (
         <Layout>
             <LoginBox>
-                {isRegister ? (
-                    <div>
-                        <h1>Registro</h1>
-                        <p>Por favor, digite suas credenciais</p>
-                        <Form>
-                            {/* Nome Completo */}
-                            <label htmlFor="name">Nome Completo</label>
-                            <input type="text" id='name' name='name' />
-                            {/* Email */}
-                            <label htmlFor="email">Email</label>
-                            <input type="text" id='email' name='email' />
-                            {/* Senha */}
-                            <label htmlFor="password">Senha</label>
-                            <input type="text" id='password' name='password' />
-
-                            <label htmlFor="acessibilidades">Acessibilidades
-                                {/* Visual */}
-                                <label className="checkbox">
-                                    <input id="checkbox-visual" type="checkbox" name="checkbox" />
-                                    Visual
-                                </label>
-                                {/* Motora */}
-                                <label className="checkbox">
-                                    <input id="checkbox-motora" type="checkbox" name="checkbox" />
-                                    Motora
-                                </label>
-                                {/* Auditiva */}
-                                <label className="checkbox">
-                                    <input id="checkbox-auditiva" type="checkbox" name="checkbox" />
-                                    Auditiva
-                                </label>
-                                {/* Daltonismo */}
-                                <label className="checkbox">
-                                    <input id="checkbox-daltonismo" type="checkbox" name="checkbox" />
-                                    Daltonismo
-                                </label>
-                                {/* Idoso */}
-                                <label className="checkbox">
-                                    <input id="checkbox-idoso" type="checkbox" name="checkbox" />
-                                    Idoso
-                                </label>
-                            </label>
-                        </Form>
-                        <p onClick={handleLoginRedirect} className="link">Já possui cadastro? Entre aqui!</p>
-                        <Button size="small" onClick={() => { }}>Registrar-se</Button>
-                    </div>
-                ) : (
-                    <div>
-                        <h1>Login</h1>
-                        <p>Por favor, entre com suas credenciais</p>
-                        <Form>
-                            <label htmlFor="email">Email</label>
-                            <input type="text" id='email' name='email' />
-                            <label htmlFor="password">Senha</label>
-                            <input type="text" id='password' name='password' />
-                        </Form>
-                        <p onClick={handleRegisterRedirect} className="link">Ainda não possui cadastro? Registre-se aqui!</p>
-                        <Button size="small" onClick={() => { }}>Login</Button>
-                    </div>
-                )}
+                <h1>Login</h1>
+                <p>Por favor, entre com suas credenciais</p>
+                <Form>
+                    {/* Nome de usuário */}
+                    <TextField
+                        id="username"
+                        label="Nome de usuário"
+                        type="username"
+                        onChange={handleUsername}
+                        required
+                    />
+                    {/* Senha */}
+                    <TextField
+                        id="password"
+                        label="Senha"
+                        type={showPassword ? "text" : "password"}
+                        onChange={handlePassword}
+                        required
+                        minLength={1}
+                    />
+                    <p onClick={togglePasswordVisibility} id="show-password">{showPassword ? "Ocultar " : "Mostrar "}Senha</p>
+                    <Button onClick={(e) => handleLogin(e)}>Entrar</Button>
+                </Form>
+                <p onClick={handleClick} className="link">Ainda não possui cadastro? Registre-se aqui!</p>
             </LoginBox>
         </Layout>
     );
