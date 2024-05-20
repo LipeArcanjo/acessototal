@@ -154,7 +154,6 @@ export default function Register() {
                             Idoso
                         </Checkbox>
                     </label>
-
                     <Button onClick={() => {}} type="submit">Registrar-se</Button>
                 </Form>
                 <p onClick={handleClick} className="link">Já possui cadastro? Entre aqui!</p>

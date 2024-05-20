@@ -37,6 +37,7 @@ export const RegisterBox = styled.div`
     .link{
     text-decoration: underline;
     font-size: 0.75rem;
+    margin-bottom: 2vh;
     
     &:hover{
         cursor: pointer;
@@ -45,11 +46,15 @@ export const RegisterBox = styled.div`
 `
 
 export const Form = styled.form`
-margin: 3vh 0;
+    margin-top: 3vh;
     display: inline-grid;
 
     & label {
         margin-top: 3vh;
+    }
+
+    Button {
+        margin: 0 auto;
     }
 
     & input{
