@@ -5,7 +5,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
     size?: "large" | "small";
     variant?: "info" 
-    onClick: () => void;
+    onClick: any;
 }
 
 export const Button = ({
