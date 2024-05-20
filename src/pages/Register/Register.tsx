@@ -101,7 +101,6 @@ export default function Register() {
                         type="username"
                         onChange={handleUsername}
                         required
-                        value={nomeUsuario}
                     />
                     {/* Nome Completo */}
                     <TextField
@@ -110,7 +109,6 @@ export default function Register() {
                         type="name"
                         onChange={handleName}
                         required
-                        value={nomeCompleto}
                     />
                     {/* Email */}
                     <TextField
@@ -119,7 +117,6 @@ export default function Register() {
                         type="email"
                         onChange={handleEmail}
                         required
-                        value={email}
                     />
                     {/* Senha */}
                     <TextField
@@ -129,7 +126,6 @@ export default function Register() {
                         onChange={handlePassword}
                         required
                         minLength={1}
-                        value={senha}
                     />
                     <p onClick={togglePasswordVisibility} id="show-password">{showPassword ? "Ocultar " : "Mostrar "}Senha</p>
 
@@ -157,6 +153,9 @@ export default function Register() {
                     <Button onClick={() => {}} type="submit">Registrar-se</Button>
                 </Form>
                 <p onClick={handleClick} className="link">Já possui cadastro? Entre aqui!</p>
+                <a href="https://youtu.be/9NKo1oEzNY0">
+                    Link do vídeo de demonstração do Login/Registro no banco de dados
+                </a>
             </RegisterBox>
         </Layout>
     );

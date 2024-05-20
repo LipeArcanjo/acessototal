@@ -50,7 +50,7 @@ export default function Login() {
             }
 
             const data = await response.json();
-            
+
             if (data) {
                 sessionStorage.setItem("userToken", data.token);
                 sessionStorage.setItem("fullname", data.fullname);
@@ -106,7 +106,10 @@ export default function Login() {
                     <Button onClick={handleLogin}>Entrar</Button>
                 </Form>
                 <p onClick={handleClick} className="link">Ainda não possui cadastro? Registre-se aqui!</p>
-            </LoginBox>
-        </Layout>
+                <a href="https://youtu.be/9NKo1oEzNY0">
+                    Link do vídeo de demonstração do Login/Registro no banco de dados
+                </a>
+        </LoginBox>
+        </Layout >
     );
 }
