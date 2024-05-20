@@ -153,7 +153,7 @@ export default function Register() {
                     <Button onClick={() => {}} type="submit">Registrar-se</Button>
                 </Form>
                 <p onClick={handleClick} className="link">Já possui cadastro? Entre aqui!</p>
-                <a href="https://youtu.be/9NKo1oEzNY0">
+                <a href="https://youtu.be/LJ3lZyz_4dk">
                     Link do vídeo de demonstração do Login/Registro no banco de dados
                 </a>
             </RegisterBox>

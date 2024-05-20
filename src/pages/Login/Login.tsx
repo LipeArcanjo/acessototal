@@ -106,7 +106,7 @@ export default function Login() {
                     <Button onClick={handleLogin}>Entrar</Button>
                 </Form>
                 <p onClick={handleClick} className="link">Ainda não possui cadastro? Registre-se aqui!</p>
-                <a href="https://youtu.be/9NKo1oEzNY0">
+                <a href="https://youtu.be/LJ3lZyz_4dk">
                     Link do vídeo de demonstração do Login/Registro no banco de dados
                 </a>
         </LoginBox>
