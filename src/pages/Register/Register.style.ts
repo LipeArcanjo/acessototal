@@ -54,7 +54,7 @@ export const Form = styled.form`
     }
 
     Button {
-        margin: 0 auto;
+        margin: 1.5vh auto;
     }
 
     & input{
