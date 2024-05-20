@@ -18,6 +18,12 @@ export default function Contact() {
         setContacts(contactList);
     }, []);
 
+    // Função para renderizar link
+    function handleLink(url:string) {
+        window.open(url, '_blank', 'noopener, noreferrer');
+
+    }
+
     return (
         <Layout>
             {/* LEMBRAR DE VOLTAR PRA DENTRO DO CONTACT WRAPPER!! */}
@@ -70,7 +76,7 @@ export default function Contact() {
                                 <img src={contact.image} alt={contact.name + contact.surname} />
                             </ContactImage>
                         </ContactCardRow>
-                        <Button variant="info" onClick={() => { }}>
+                        <Button variant="info" onClick={() => handleLink('https://www.linkedin.com/in/lipearcanjoms/')}>
                             Entre em contato
                         </Button>
                     </ContactCard>
