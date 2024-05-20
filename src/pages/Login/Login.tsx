@@ -23,7 +23,7 @@ export default function Login() {
 
     const handleLogin = async (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
-        const url = "http://127.0.0.1:8000/login/" + username + "/" + password;
+        const url = "http://localhost:8000/login/" + username + "/" + password;
 
         const payload = {
             username: username,
