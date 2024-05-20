@@ -12,7 +12,7 @@ export default function Register() {
     const [senha, setSenha] = useState("");
     const [nomeCompleto, setNomeCompleto] = useState("");
     const [email, setEmail] = useState("");
-    const [acessibilidades, setAcessibilidades] = useState([]);
+    const [acessibilidades, setAcessibilidades] = useState<string[]>([]);
 
     // Para fazer com que a senha fique visível ou não
     const togglePasswordVisibility = () => {
@@ -43,7 +43,7 @@ export default function Register() {
         setEmail(value);
     };
 
-    const handleCheckboxChange = (event) => {
+    const handleCheckboxChange = (event: any) => {
         const { value, checked } = event.target;
         if (checked) {
             setAcessibilidades([...acessibilidades, value]);
@@ -52,7 +52,7 @@ export default function Register() {
         }
     };
 
-    const handleRegister = async (event) => {
+    const handleRegister = async (event: any) => {
         event.preventDefault();
         const url = "http://localhost:8000/register";
 
@@ -101,6 +101,7 @@ export default function Register() {
                         type="username"
                         onChange={handleUsername}
                         required
+                        value={nomeUsuario}
                     />
                     {/* Nome Completo */}
                     <TextField
@@ -109,6 +110,7 @@ export default function Register() {
                         type="name"
                         onChange={handleName}
                         required
+                        value={nomeCompleto}
                     />
                     {/* Email */}
                     <TextField
@@ -117,6 +119,7 @@ export default function Register() {
                         type="email"
                         onChange={handleEmail}
                         required
+                        value={email}
                     />
                     {/* Senha */}
                     <TextField
@@ -126,6 +129,7 @@ export default function Register() {
                         onChange={handlePassword}
                         required
                         minLength={1}
+                        value={senha}
                     />
                     <p onClick={togglePasswordVisibility} id="show-password">{showPassword ? "Ocultar " : "Mostrar "}Senha</p>
 

@@ -5,9 +5,14 @@ import { FeedbackBox, FeedbackForms, FeedbackReaction, FeedbackText } from "./Fe
 import { FeedbackCard } from "../../components/FeedbackCard/FeedbackCard";
 import { Button } from "../../components/Button/Button";
 
+interface FeedbackReactionType {
+    text: string;
+    emoji: string;
+}
+
 export default function Feedback() {
 
-    const [reactions, setReactions] = useState([]);
+    const [reactions, setReactions] = useState<FeedbackReactionType[]>([]);
     const [feedbackInput, setFeedbackInput] = useState('');
 
     useEffect(() => {

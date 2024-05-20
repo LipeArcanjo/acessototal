@@ -8,11 +8,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faBuildingColumns } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Button } from "../../components/Button/Button";
-import { Link } from "react-router-dom";
+
+interface Contact {
+    rm: string;
+    name: string;
+    surname: string;
+    local: string;
+    university: string;
+    github: string;
+    image: string;
+}
 
 export default function Contact() {
 
-    const [contacts, setContacts] = useState([]);
+    const [contacts, setContacts] = useState<Contact[]>([]);
 
     useEffect(() => {
         setContacts(contactList);

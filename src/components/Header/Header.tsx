@@ -13,12 +13,16 @@ import { menus } from "../../mocks"
 import { useEffect, useState } from "react";
 import { MenuList } from "../menuList/menuList";
 import { SocialMediaContact } from "../SocialMediaContact/SocialMediaContact";
-import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
+
+type MenuItem = {
+    text: string;
+    link: string;
+};
 
 export const Header = () => {
 
-    const [menu, setMenu] = useState([]);
+    const [menu, setMenu] = useState<MenuItem[]>([]);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {

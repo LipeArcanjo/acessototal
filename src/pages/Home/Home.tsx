@@ -7,9 +7,14 @@ import { useEffect, useState } from "react";
 import { products } from "../../mocks/products";
 import { ProductList } from "../../components/HomeProductsList/HomeProductsList";
 
+interface Product {
+    text: string;
+    link: string;
+}
+
 export default function Home() {
 
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState<Product[]>([]);
 
     useEffect(() => {
         setProduct(products);

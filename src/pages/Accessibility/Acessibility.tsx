@@ -6,9 +6,13 @@ import { AccessibilityCard } from "../../components/AccessibilityList/Accessibil
 import NavegaCao from "../../assets/personagem-exemplo-acessibilidade.jpg";
 import ToggleSwitch from "../../components/ToggleSwitch/ToggleSwitch";
 
+interface Accessibility {
+    text: string;
+}
+
 export default function Acessibility() {
 
-    const [accessibilities, setAccessibilities] = useState([]);
+    const [accessibilities, setAccessibilities] = useState<Accessibility[]>([]);
 
     useEffect(() => {
         setAccessibilities(accessibilitiesList);
@@ -24,9 +28,9 @@ export default function Acessibility() {
             <AcessibilityWrapper>
                 <AcessibilityFirstContent>
                     <AcessibilityList>
-                        {accessibilities.map((accessibilities, index) => (
+                        {accessibilities.map((accessibility, index) => (
                             <AccessibilityCard key={index}>
-                                <h2>{accessibilities.text}</h2>
+                                <h2>{accessibility.text}</h2>
                             </AccessibilityCard>
                         ))}
                     </AcessibilityList>

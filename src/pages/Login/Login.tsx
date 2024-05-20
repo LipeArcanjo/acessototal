@@ -21,7 +21,7 @@ export default function Login() {
         setPassword(value);
     };
 
-    const handleLogin = async (event) => {
+    const handleLogin = async (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
         const url = "http://localhost:8000/login/" + username + "/" + password;
 
@@ -90,6 +90,7 @@ export default function Login() {
                         id="username"
                         label="Nome de usuário"
                         type="username"
+                        value={username}
                         onChange={handleUsername}
                         required
                     />
@@ -98,12 +99,13 @@ export default function Login() {
                         id="password"
                         label="Senha"
                         type={showPassword ? "text" : "password"}
+                        value={password}
                         onChange={handlePassword}
                         required
                         minLength={1}
                     />
                     <p onClick={togglePasswordVisibility} id="show-password">{showPassword ? "Ocultar " : "Mostrar "}Senha</p>
-                    <Button onClick={(e) => handleLogin(e)}>Entrar</Button>
+                    <Button onClick={() => handleLogin}>Entrar</Button>
                 </Form>
                 <p onClick={handleClick} className="link">Ainda não possui cadastro? Registre-se aqui!</p>
             </LoginBox>
