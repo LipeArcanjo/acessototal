@@ -1,7 +1,7 @@
 import { Button } from "../../components/Button/Button";
 import { Layout } from "../../components/Layout/Layout";
 import { HomeActionContentElement, HomeColumnElement, HomeFirstImage, HomeWrapperElement, HomeProducts, HomeProductsItemsList, HomeProductsItems, HomeMarketingImage, HomeFlex, HomeProductsRow, } from "./Home.style";
-import FirstImage from "../../assets/computador-CRM-Salesforce.png"
+import FirstImage from "../../assets/CRM-Salesforce.png"
 import MarketingImage from "../../assets/marketing.png"
 import { useEffect, useState } from "react";
 import { products } from "../../mocks/products";

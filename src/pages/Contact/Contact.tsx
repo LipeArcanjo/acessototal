@@ -75,14 +75,14 @@ export default function Contact() {
                         </Button>
                     </ContactCard>
                 ))}
-                <h1>
+                {/* <h1>
                 <a href="https://github.com/LipeArcanjo/acessototal">Link do github</a>
                 </h1>
                 <h1>
                 <a href="https://youtu.be/Z1WsOGEc9wM">Link do video no youtube</a>
                 </h1>
                 <p>https://github.com/LipeArcanjo/acessototal</p>
-                <p>https://youtu.be/Z1WsOGEc9wM</p>
+                <p>https://youtu.be/Z1WsOGEc9wM</p> */}
             </ContactWrapper>
         </Layout>
     );
